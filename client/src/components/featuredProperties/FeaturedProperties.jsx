@@ -2,7 +2,6 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import img from '../assests/2bed.jpeg'
-import person from '../assests/agent.png'
 import {Link } from 'react-router-dom'
 import {FaBed, FaSquareFull} from 'react-icons/fa'
 import classes from './featuredProperties.module.css'
@@ -66,7 +65,6 @@ const FeaturedProperties = () => {
                   </div>
                   <div className={classes.priceAndOwner}>
                     <span className={classes.price}> ${property.price}</span>
-                    <img src={person} alt="agent" className={classes.owner} />
                   </div>
                   <div className={classes.moreDetails}>
                     <span>{property.beds} <FaBed className={classes.icon}/> </span>
