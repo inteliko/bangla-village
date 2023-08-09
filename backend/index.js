@@ -30,10 +30,13 @@ app.use('/images', express.static('public/images'))
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true }))
-app.use(cors({ origin: 'https://deft-bunny-115668.netlify.app' }))
 app.use("/auth", authController)
 app.use("/property", propertyController)
 app.use("/upload", uploadController )
+
+const corsOptions = {
+  origin: 'https://deft-bunny-115668.netlify.app', // Replace with your frontend URL
+};
 
 
 app.listen(process.env.PORT, () => {
