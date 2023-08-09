@@ -24,7 +24,7 @@ const PropertyDetail = () => {
   useEffect(() => {
     const fetchPropertyDetail = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/property/find/${id}`, {
+        const response = await fetch(`https://bangla-village.onrender.com/property/find/${id}`, {
           method: 'GET'
         });
         
@@ -72,7 +72,7 @@ const PropertyDetail = () => {
       <div className={classes.wrapper}>
         {propertyDetail && propertyDetail.img ? (
           <div className={classes.left}>
-            <img src={`http://localhost:5000/images/${propertyDetail.img}`} alt="" />
+            <img src={`https://bangla-village.onrender.com/images/${propertyDetail.img}`} alt="" />
           </div>
         ) : (
           <div className={classes.left}>
@@ -113,7 +113,7 @@ const PropertyDetail = () => {
         <span className={classes.price}><span>Price:</span> {propertyDetail.price}</span>
         {propertyDetail.currentOwner ? (
           <span style={{ display: 'flex', alignItems: 'center', gap: '12p2x' }}>
-            Owner <img src={`http://localhost:5000/images/${propertyDetail.currentOwner.profileImg}`} alt="" />
+            Owner <img src={`https://bangla-village.onrender.com/images/${propertyDetail.currentOwner.profileImg}`} alt="" />
           </span>
         ) : (
           <span>No owner information available</span>

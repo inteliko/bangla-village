@@ -30,9 +30,11 @@ app.use('/images', express.static('public/images'))
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true }))
+app.use(cors({ origin: 'https://deft-bunny-115668.netlify.app' }))
 app.use("/auth", authController)
 app.use("/property", propertyController)
 app.use("/upload", uploadController )
+
 
 app.listen(process.env.PORT, () => {
   console.log(`This app is running on port ${process.env.PORT}`);

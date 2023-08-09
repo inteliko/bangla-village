@@ -16,7 +16,7 @@ const FeaturedProperties = () => {
     const fetchFeatured = async() => {
       try{
         
-        fetch('http://localhost:5000/property/getAll')
+        fetch('/property/getAll')
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -54,7 +54,7 @@ const FeaturedProperties = () => {
               <div key={property._id} className={classes.featuredProperty}>
                 <Link to={`/propertyDetail/${property._id}`} className={classes.imgContainer}> 
                  
-                  <img src={ property.img ? `http://localhost:5000/images/${property.img}` :img } alt="PropertyImage" />
+                  <img src={ property.img ? `https://bangla-village.onrender.com/images/${property.img}` :img } alt="PropertyImage" />
                 </Link>
                 
                 <div className={classes.details}>

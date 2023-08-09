@@ -37,7 +37,7 @@ const Properties = () => {
 useEffect(() => {
   const fetchAllProperties = async () => {
     try {
-      const response = await fetch('http://localhost:5000/property/getAll', {
+      const response = await fetch('https://bangla-village.onrender.com/property/getAll', {
         method: 'GET'
       });
 
@@ -186,7 +186,7 @@ useEffect(() => {
                 <div key={property._id} className={classes.property}>
 
                   <Link className={classes.imgContainer} to={`/propertyDetail/${property._id}`} >
-                    <img src={`http://localhost:5000/images/${property.img}`} alt="" />
+                    <img src={`https://bangla-village.onrender.com/images/${property.img}`} alt="" />
                   </Link>
 
                   <div className={classes.details}>
